@@ -1,0 +1,840 @@
+index.html
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Temu Discount Codes | Always Available</title>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>T</text></svg>" type="image/svg+xml">
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.5/dist/cdn.min.js" defer></script>
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet">
+
+<style>
+
+    :root {
+
+        --primary-gradient: linear-gradient(135deg, #FF416C, #FF4B2B);
+
+        --secondary-gradient: linear-gradient(135deg, #FC5C7D, #6A82FB);
+
+        --accent-gradient: linear-gradient(135deg, #FDBB2D, #22C1C3);
+
+        --card-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+
+    }
+
+    
+
+    body {
+
+        background-color: #0f172a;
+
+        color: #f1f5f9;
+
+        font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    
+
+    .gradient-text {
+
+        background: var(--primary-gradient);
+
+        -webkit-background-clip: text;
+
+        background-clip: text;
+
+        color: transparent;
+
+    }
+
+    
+
+    .gradient-bg {
+
+        background: var(--primary-gradient);
+
+    }
+
+    
+
+    .secondary-gradient-bg {
+
+        background: var(--secondary-gradient);
+
+    }
+
+    
+
+    .accent-gradient-bg {
+
+        background: var(--accent-gradient);
+
+    }
+
+    
+
+    .card {
+
+        background: var(--card-gradient);
+
+        backdrop-filter: blur(10px);
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        transition: all 0.3s ease;
+
+    }
+
+    
+
+    .card:hover {
+
+        transform: translateY(-5px);
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+    }
+
+    
+
+    .glow {
+
+        box-shadow: 0 0 15px rgba(255, 75, 43, 0.5);
+
+    }
+
+    
+
+    .glow:hover {
+
+        box-shadow: 0 0 30px rgba(255, 75, 43, 0.7);
+
+    }
+
+    
+
+    .custom-shape-divider-bottom {
+
+        position: absolute;
+
+        bottom: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        overflow: hidden;
+
+        line-height: 0;
+
+        z-index: -1;
+
+    }
+
+    
+
+    .custom-shape-divider-bottom svg {
+
+        position: relative;
+
+        display: block;
+
+        width: calc(100% + 1.3px);
+
+        height: 150px;
+
+    }
+
+    
+
+    .custom-shape-divider-bottom .shape-fill {
+
+        fill: rgba(255, 75, 43, 0.1);
+
+    }
+
+    
+
+    .hosting-card {
+
+        background: linear-gradient(135deg, #1f2937, #111827);
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        transition: all 0.3s ease;
+
+    }
+
+    
+
+    .hosting-card:hover {
+
+        transform: translateY(-5px);
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+    }
+
+    
+
+    code {
+
+        background-color: rgba(0, 0, 0, 0.3);
+
+        padding: 2px 5px;
+
+        border-radius: 4px;
+
+        font-family: 'Courier New', Courier, monospace;
+
+        font-size: 0.9em;
+
+    }
+
+    
+
+    .code-block {
+
+        background-color: rgba(0, 0, 0, 0.3);
+
+        padding: 1rem;
+
+        border-radius: 8px;
+
+        font-family: 'Courier New', Courier, monospace;
+
+        font-size: 0.9em;
+
+        overflow-x: auto;
+
+        white-space: pre-wrap;
+
+    }
+
+    
+
+    .copy-btn {
+
+        transition: all 0.3s ease;
+
+    }
+
+    
+
+    .copy-btn:hover {
+
+        background-color: rgba(255, 255, 255, 0.1);
+
+    }
+
+    
+
+    @keyframes pulse {
+
+        0% {
+
+            box-shadow: 0 0 0 0 rgba(255, 75, 43, 0.7);
+
+        }
+
+        70% {
+
+            box-shadow: 0 0 0 10px rgba(255, 75, 43, 0);
+
+        }
+
+        100% {
+
+            box-shadow: 0 0 0 0 rgba(255, 75, 43, 0);
+
+        }
+
+    }
+
+    
+
+    .pulse-animation {
+
+        animation: pulse 2s infinite;
+
+    }
+
+    
+
+    /* Optimize for PDF export */
+
+    @media print {
+
+        body {
+
+            width: 100%;
+
+            margin: 0;
+
+            padding: 0;
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        .page-break {
+
+            page-break-after: always;
+
+        }
+
+        
+
+        .card, .hosting-card {
+
+            break-inside: avoid;
+
+            page-break-inside: avoid;
+
+        }
+
+    }
+
+</style>
+
+</head><body class="min-h-screen"><div class="container mx-auto px-4 py-8">
+
+    <!-- Header Section -->
+
+    <header class="text-center mb-16 relative">
+
+        <div class="absolute inset-0 custom-shape-divider-bottom">
+
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+
+            </svg>
+
+        </div>
+
+        
+
+        <div class="inline-flex items-center bg-green-800 bg-opacity-20 text-green-400 px-4 py-2 rounded-full mb-6">
+
+            <i class="fas fa-lock mr-2"></i>
+
+            <span>Secure Connection</span>
+
+        </div>
+
+        
+
+        <h1 class="text-5xl font-bold mb-4 gradient-text">Temu Discount Codes</h1>
+
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">Save on your purchases with these verified coupon codes for Temu. Always available and regularly updated.</p>
+
+    </header>
+
+    
+
+    <!-- Featured Coupon Section -->
+
+    <div class="gradient-bg rounded-2xl p-8 mb-16 relative overflow-hidden glow">
+
+        <div class="absolute top-4 right-4 bg-yellow-500 text-yellow-900 font-bold py-1 px-3 rounded-full text-sm">FEATURED</div>
+
+        
+
+        <h2 class="text-3xl font-bold mb-2">Special Invitation</h2>
+
+        <p class="text-xl mb-6">Sign up instantly with this invitation code and start saving!</p>
+
+        
+
+        <div x-data="{ copied: false }" class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-md rounded-lg p-4 mb-6 flex justify-between items-center">
+
+            <span class="font-mono text-2xl font-bold">ini63336</span>
+
+            <button @click="copied = true; navigator.clipboard.writeText('ini63336'); setTimeout(() => copied = false, 2000)" class="bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg px-4 py-2 flex items-center transition duration-300">
+
+                <template x-if="!copied">
+
+                    <div class="flex items-center">
+
+                        <i class="fas fa-copy mr-2"></i>
+
+                        <span>Copy Code</span>
+
+                    </div>
+
+                </template>
+
+                <template x-if="copied">
+
+                    <div class="flex items-center text-green-400">
+
+                        <i class="fas fa-check mr-2"></i>
+
+                        <span>Copied!</span>
+
+                    </div>
+
+                </template>
+
+            </button>
+
+        </div>
+
+        
+
+        <a href="https://temu.to/m/e44gjcwiyu2" target="_blank" rel="noopener noreferrer" class="block w-full bg-white text-black font-bold py-3 rounded-lg text-center hover:bg-opacity-90 transition duration-300">
+
+            <i class="fas fa-external-link-alt mr-2"></i>
+
+            Visit Temu (Secure Link)
+
+        </a>
+
+    </div>
+
+    
+
+    <!-- All Coupons Section -->
+
+    <h2 class="text-3xl font-bold mb-8 gradient-text">ALL DISCOUNT CODES</h2>
+
+    
+
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+
+        <!-- Coupon 1 -->
+
+        <div class="card rounded-2xl p-6 relative">
+
+            <span class="inline-block bg-gray-800 text-gray-300 text-sm px-3 py-1 rounded-full mb-4">New App User</span>
+
+            <h3 class="text-2xl font-bold mb-2">100€ Coupon Bundle</h3>
+
+            <p class="text-gray-400 mb-4">Enjoy substantial savings with this exclusive coupon bundle when you join Temu</p>
+
+            
+
+            <div x-data="{ copied: false }" class="bg-gray-800 bg-opacity-50 rounded-lg p-3 mb-4 flex justify-between items-center">
+
+                <span class="font-mono text-lg font-bold">acq962798</span>
+
+                <button @click="copied = true; navigator.clipboard.writeText('acq962798'); setTimeout(() => copied = false, 2000)" class="copy-btn rounded p-2">
+
+                    <template x-if="!copied">
+
+                        <i class="fas fa-copy"></i>
+
+                    </template>
+
+                    <template x-if="copied">
+
+                        <i class="fas fa-check text-green-400"></i>
+
+                    </template>
+
+                </button>
+
+            </div>
+
+            
+
+            <a href="https://temu.to/m/u2flxbv374p" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-orange-500 font-bold py-2 rounded-lg text-center hover:opacity-90 transition duration-300">
+
+                <i class="fas fa-lock mr-2"></i>
+
+                Use Code (Secure)
+
+            </a>
+
+        </div>
+
+        
+
+        <!-- Coupon 2 -->
+
+        <div class="card rounded-2xl p-6 relative">
+
+            <span class="inline-block bg-gray-800 text-gray-300 text-sm px-3 py-1 rounded-full mb-4">New App User</span>
+
+            <h3 class="text-2xl font-bold mb-2">Free Gifts</h3>
+
+            <p class="text-gray-400 mb-4">New users can receive special gifts when signing up through this promotional link</p>
+
+            
+
+            <div x-data="{ copied: false }" class="bg-gray-800 bg-opacity-50 rounded-lg p-3 mb-4 flex justify-between items-center">
+
+                <span class="font-mono text-lg font-bold">frx203140</span>
+
+                <button @click="copied = true; navigator.clipboard.writeText('frx203140'); setTimeout(() => copied = false, 2000)" class="copy-btn rounded p-2">
+
+                    <template x-if="!copied">
+
+                        <i class="fas fa-copy"></i>
+
+                    </template>
+
+                    <template x-if="copied">
+
+                        <i class="fas fa-check text-green-400"></i>
+
+                    </template>
+
+                </button>
+
+            </div>
+
+            
+
+            <a href="https://temu.to/m/e70phvq5hks" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-orange-500 font-bold py-2 rounded-lg text-center hover:opacity-90 transition duration-300">
+
+                <i class="fas fa-lock mr-2"></i>
+
+                Use Code (Secure)
+
+            </a>
+
+        </div>
+
+        
+
+        <!-- Coupon 3 -->
+
+        <div class="card rounded-2xl p-6 relative">
+
+            <span class="inline-block bg-gray-800 text-gray-300 text-sm px-3 py-1 rounded-full mb-4">New App User</span>
+
+            <h3 class="text-2xl font-bold mb-2">Exclusive Deal</h3>
+
+            <p class="text-gray-400 mb-4">Special offer for first-time Temu shoppers with additional savings</p>
+
+            
+
+            <div x-data="{ copied: false }" class="bg-gray-800 bg-opacity-50 rounded-lg p-3 mb-4 flex justify-between items-center">
+
+                <span class="font-mono text-lg font-bold">acq716210</span>
+
+                <button @click="copied = true; navigator.clipboard.writeText('acq716210'); setTimeout(() => copied = false, 2000)" class="copy-btn rounded p-2">
+
+                    <template x-if="!copied">
+
+                        <i class="fas fa-copy"></i>
+
+                    </template>
+
+                    <template x-if="copied">
+
+                        <i class="fas fa-check text-green-400"></i>
+
+                    </template>
+
+                </button>
+
+            </div>
+
+            
+
+            <a href="https://temu.to/m/u2fxglegh6k" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-orange-500 font-bold py-2 rounded-lg text-center hover:opacity-90 transition duration-300">
+
+                <i class="fas fa-lock mr-2"></i>
+
+                Use Code (Secure)
+
+            </a>
+
+        </div>
+
+    </div>
+
+    
+
+    <!-- How to Redeem Section -->
+
+    <h2 class="text-3xl font-bold mb-8 gradient-text">HOW TO REDEEM CODES</h2>
+
+    
+
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+
+        <div class="card rounded-2xl p-6 relative">
+
+            <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-orange-500 flex items-center justify-center font-bold text-lg">1</div>
+
+            <div class="text-4xl mb-4">🔍</div>
+
+            <h3 class="text-2xl font-bold mb-2">Use the Search Bar</h3>
+
+            <p class="text-gray-400">Enter the coupon code directly in the search bar at the top of the Temu app or website.</p>
+
+        </div>
+
+        
+
+        <div class="card rounded-2xl p-6 relative">
+
+            <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-orange-500 flex items-center justify-center font-bold text-lg">2</div>
+
+            <div class="text-4xl mb-4">🛒</div>
+
+            <h3 class="text-2xl font-bold mb-2">Apply at Checkout</h3>
+
+            <p class="text-gray-400">Add items to your cart and enter the code in the coupon field during checkout.</p>
+
+        </div>
+
+        
+
+        <div class="card rounded-2xl p-6 relative">
+
+            <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-orange-500 flex items-center justify-center font-bold text-lg">3</div>
+
+            <div class="text-4xl mb-4">👤</div>
+
+            <h3 class="text-2xl font-bold mb-2">Profile Section</h3>
+
+            <p class="text-gray-400">Navigate to your profile, find the "Coupons" section, and add the code there for future use.</p>
+
+        </div>
+
+    </div>
+
+    
+
+    <!-- Affiliate Partnership -->
+
+    <div class="card rounded-2xl p-8 mb-16">
+
+        <h2 class="text-3xl font-bold mb-4 gradient-text">TEMU AFFILIATE PARTNERSHIP</h2>
+
+        <p class="text-lg mb-4">I'm an official Temu affiliate partner. Using my code <span class="font-mono font-bold text-white">ini63336</span> or shopping through my links helps support me!</p>
+
+        <p class="text-gray-400 mb-4">This page contains affiliate links. When you purchase through these links, I may earn a commission at no extra cost to you.</p>
+
+        <div class="bg-gray-800 bg-opacity-50 rounded-lg p-4">
+
+            <p class="text-sm text-gray-400">In accordance with FTC guidelines, I disclose that I may receive compensation from the companies whose products I review or promote. This does not affect my opinions or recommendations.</p>
+
+        </div>
+
+    </div>
+
+    
+
+    <!-- FAQ Section -->
+
+    <h2 class="text-3xl font-bold mb-8 gradient-text">FREQUENTLY ASKED QUESTIONS</h2>
+
+    
+
+    <div class="space-y-4 mb-16">
+
+        <div class="card rounded-xl p-6">
+
+            <h3 class="text-xl font-bold mb-2">How long are these codes valid?</h3>
+
+            <p class="text-gray-400">Most Temu discount codes are available for a limited time. For the best experience, use them as soon as possible.</p>
+
+        </div>
+
+        
+
+        <div class="card rounded-xl p-6">
+
+            <h3 class="text-xl font-bold mb-2">Can I use multiple codes at once?</h3>
+
+            <p class="text-gray-400">Generally, Temu only allows one discount code per order. Choose the one that provides the best value for your purchase.</p>
+
+        </div>
+
+        
+
+        <div class="card rounded-xl p-6">
+
+            <h3 class="text-xl font-bold mb-2">Are these codes only for new users?</h3>
+
+            <p class="text-gray-400">Most of the codes listed are for new users, but some promotions are available for all Temu users. Check the description of each code for eligibility.</p>
+
+        </div>
+
+        
+
+        <div class="card rounded-xl p-6">
+
+            <h3 class="text-xl font-bold mb-2">How do I know if a code is still working?</h3>
+
+            <p class="text-gray-400">The best way to check is to attempt to apply the code during checkout. If it's no longer valid, Temu will notify you and you can try a different code.</p>
+
+        </div>
+
+    </div>
+
+    
+
+    <!-- Host Permanently Section -->
+
+    <h2 class="text-3xl font-bold mb-8 gradient-text">HOST THIS PAGE PERMANENTLY</h2>
+
+    
+
+    <p class="text-lg mb-6">Follow these instructions to host this page permanently on GitHub Pages or other free services:</p>
+
+    
+
+    <div class="space-y-8 mb-16">
+
+        <!-- GitHub Pages -->
+
+        <div class="hosting-card rounded-2xl p-6">
+
+            <div class="flex items-center mb-4">
+
+                <i class="fab fa-github text-4xl mr-4"></i>
+
+                <h3 class="text-2xl font-bold">GitHub Pages (Recommended)</h3>
+
+            </div>
+
+            
+
+            <ol class="list-decimal pl-6 mb-6 space-y-4">
+
+                <li class="text-gray-300">
+
+                    <strong>Create a GitHub account</strong> if you don't already have one at 
+
+                    <a href="https://github.com" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">github.com</a>
+
+                </li>
+
+                
+
+                <li class="text-gray-300">
+
+                    <strong>Create a new repository</strong> by clicking the "+" icon in the top right and selecting "New repository"
+
+                </li>
+
+                
+
+                <li class="text-gray-300">
+
+                    <strong>Name your repository</strong> (e.g., "temu-coupons") and set it to "Public"
+
+                </li>
+
+                
+
+                <li class="text-gray-300">
+
+                    <strong>Add this HTML file</strong> to your repository:
+
+                    <ul class="list-disc pl-6 mt-2">
+
+                        <li>Click "Add file" > "Create new file"</li>
+
+                        <li>Name the file "index.html"</li>
+
+                        <li>Copy and paste the entire HTML code of this page</li>
+
+                        <li>Click "Commit new file" at the bottom</li>
+
+                    </ul>
+
+                </li>
+
+                
+
+                <li class="text-gray-300">
+
+                    <strong>Enable GitHub Pages</strong>:
+
+                    <ul class="list-disc pl-6 mt-2">
+
+                        <li>Go to your repository's "Settings"</li>
+
+                        <li>Scroll down to "GitHub Pages" section</li>
+
+                        <li>Under "Source", select "main branch"</li>
+
+                        <li>Click "Save"</li>
+
+                    </ul>
+
+                </li>
+
+                
+
+                <li class="text-gray-300">
+
+                    <strong>Access your page</strong> at https://[your-username].github.io/[repository-name]/ (e.g., https://yourusername.github.io/temu-coupons/)
+
+                </li>
+
+            </ol>
+
+        </div>
+
+        
+
+        <!-- Netlify -->
+
+        <div class="hosting-card rounded-2xl p-6">
+
+            <div class="flex items-center mb-4">
+
+                <i class="fab fa-netlify text-4xl mr-4"></i>
+
+                <h3 class="text-2xl font-bold">Netlify</h3>
+
+            </div>
+
+            
+
+            <ol class="list-decimal pl-6 mb-6 space-y-4">
+
+                <li class="text-gray-300">
+
+                    <strong>Create a Netlify account</strong> at 
+
+                    <a href="https://netlify.com" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">netlify.com</a>
+
+                </li>
+
+                
+
+                <li class="text-gray-300">
+
+                    <strong>Go to the Netlify dashboard</strong> and click "Add new site" > "Deploy manually"
+
+                </li>
+
+                
+
+                <li class="text-gray-300">
+
+                    <strong>Create a ZIP file</strong> containing this HTML file (renamed to "index.html")
+
+                </li>
+
+                
+
+                <li class="text-gray-300">
+
+                    <strong>Drag and drop</strong> the ZIP file to the upload area
+
+                </li>
+
+                
+
+                <li 
